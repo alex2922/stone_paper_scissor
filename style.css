@@ -2,13 +2,15 @@
 :root {
   --yellow: #FED835;
   --red: #FF0045;
-  --white:#ffffff ;
+  --white: #ffffff;
   --black: #0f0f0f;
-  --quick:all 0.25s ease-out;
+  --quick: all 0.25s ease-out;
   --opacity: 0.5;
 }
 
-*, *::after, *::before {
+*,
+*::after,
+*::before {
   box-sizing: border-box;
   margin: 0px;
   padding: 0px;
@@ -51,7 +53,8 @@ p {
   opacity: 1;
 }
 
-button, .button {
+button,
+.button {
   border: 5px solid;
   background: var(--yellow);
   font-size: 24px;
@@ -61,7 +64,8 @@ button, .button {
   border-radius: 50px;
   transition: var(--quick);
 }
-button:hover, .button:hover {
+button:hover,
+.button:hover {
   transform: scale(1.05);
 }
 
@@ -170,8 +174,8 @@ body {
 }
 .startup_screen .main_area .container .img {
   background: var(--yellow);
-  height: 512px;
-  width: 512px;
+  height: 400px;
+  width: 400px;
 }
 .startup_screen .main_area .container .controls {
   display: flex;
@@ -184,6 +188,13 @@ body {
   font-weight: 500;
 }
 
+@media screen and (min-width: 900px) {
+  .img {
+    height: 250px;
+    width: 250px;
+    background: blue;
+  }
+}
 .starting_inputs {
   position: absolute;
   top: 0px;
@@ -195,7 +206,7 @@ body {
   align-items: center;
   justify-content: space-evenly;
   transition: var(--quick);
-  transform: translateX(100%);
+  transform: translateX(10000px);
 }
 .starting_inputs .card {
   background: var(--white);
@@ -215,7 +226,8 @@ body {
   font-weight: 700;
   font-size: 20px;
 }
-.starting_inputs .card form input:not(.button), .starting_inputs .card form select {
+.starting_inputs .card form input:not(.button),
+.starting_inputs .card form select {
   font-size: 18px;
   padding: 10px 10px;
   margin: 10px 0px;
@@ -251,7 +263,7 @@ body {
   align-items: center;
   justify-content: space-evenly;
   transition: var(--quick);
-  transform: translateX(100%);
+  transform: translateX(10000px);
 }
 .instructions .card {
   background: var(--white);
@@ -269,4 +281,14 @@ body {
   color: #5c5c5c;
   letter-spacing: 2px;
   text-justify: distribute;
+}
+
+.main_game_ui {
+  height: 100vh;
+  width: 100vw;
+  background: var(--white);
+  z-index: 100;
+  position: absolute;
+  top: 0px;
+  left: 0px;
 }/*# sourceMappingURL=style.css.map */
