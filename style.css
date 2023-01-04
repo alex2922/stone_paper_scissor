@@ -1,0 +1,272 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+:root {
+  --yellow: #FED835;
+  --red: #FF0045;
+  --white:#ffffff ;
+  --black: #0f0f0f;
+  --quick:all 0.25s ease-out;
+  --opacity: 0.5;
+}
+
+*, *::after, *::before {
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+  font-family: "Montserrat", sans-serif;
+}
+
+a {
+  text-decoration: none;
+  cursor: pointer;
+  color: var(--black);
+  font-weight: 600;
+  transition: var(--quick);
+}
+a:hover {
+  transform: scale(1.05);
+}
+
+.yellow {
+  color: var(--yellow);
+}
+
+.created_by {
+  display: flex;
+}
+.created_by .text {
+  opacity: var(--opacity);
+  font-weight: 400;
+  margin-right: 10px;
+}
+
+p {
+  font-weight: 400;
+}
+
+.inactive {
+  opacity: var(--opacity);
+  transition: var(--quick);
+}
+.inactive:hover {
+  opacity: 1;
+}
+
+button, .button {
+  border: 5px solid;
+  background: var(--yellow);
+  font-size: 24px;
+  text-transform: uppercase;
+  font-weight: 600;
+  padding: 10px 50px;
+  border-radius: 50px;
+  transition: var(--quick);
+}
+button:hover, .button:hover {
+  transform: scale(1.05);
+}
+
+.cross {
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  height: 50px;
+  width: 50px;
+  transition: var(--quick);
+}
+.cross span {
+  content: "";
+  background: var(--black);
+  height: 5px;
+  width: 40px;
+  display: block;
+  position: absolute;
+  bottom: 50%;
+  left: 50%;
+  border-radius: 5px;
+  transform: translate(-50%, -50%) rotate(45deg);
+  transition: var(--quick);
+}
+.cross span:nth-child(2) {
+  transform: translate(-50%, -50%) rotate(-45deg);
+}
+.cross:hover {
+  -webkit-animation: little 0.33s ease-out;
+          animation: little 0.33s ease-out;
+}
+@-webkit-keyframes little {
+  0% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(-10deg);
+  }
+  50% {
+    transform: rotate(0deg) scale(1.2);
+  }
+  75% {
+    transform: rotate(10deg);
+  }
+  110% {
+    transform: rotate(0deg) scale(1);
+  }
+}
+@keyframes little {
+  0% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(-10deg);
+  }
+  50% {
+    transform: rotate(0deg) scale(1.2);
+  }
+  75% {
+    transform: rotate(10deg);
+  }
+  110% {
+    transform: rotate(0deg) scale(1);
+  }
+}
+
+body {
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+  display: grid;
+  place-items: center;
+  font-size: 18px;
+}
+
+.startup_screen {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.startup_screen .topbar {
+  height: 100px;
+  width: 100vw;
+  padding: 0px 100px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.startup_screen .main_area {
+  height: calc(100vh - 100px);
+  width: 100vw;
+  margin: 0px 100px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.startup_screen .main_area .container {
+  height: 80%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.startup_screen .main_area .container .img {
+  background: var(--yellow);
+  height: 512px;
+  width: 512px;
+}
+.startup_screen .main_area .container .controls {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.startup_screen .main_area .container .controls p {
+  margin-top: 30px;
+  font-size: 24px;
+  font-weight: 500;
+}
+
+.starting_inputs {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  height: 100vh;
+  width: 100vw;
+  background: rgba(0, 0, 0, 0.733);
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  transition: var(--quick);
+  transform: translateX(100%);
+}
+.starting_inputs .card {
+  background: var(--white);
+  padding: 30px 50px;
+  border-radius: 10px;
+  height: 500px;
+  position: relative;
+  width: 400px;
+}
+.starting_inputs .card form {
+  margin-top: 60px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+.starting_inputs .card form label {
+  font-weight: 700;
+  font-size: 20px;
+}
+.starting_inputs .card form input:not(.button), .starting_inputs .card form select {
+  font-size: 18px;
+  padding: 10px 10px;
+  margin: 10px 0px;
+  border-radius: 5px;
+  border: 1px solid var(--black);
+  font-weight: 700;
+}
+.starting_inputs .card form #rounds * {
+  background: var(--yellow);
+  font-weight: 700;
+  color: var(--black);
+  border: 1px solid var(--black);
+  padding: 5px;
+}
+.starting_inputs .card form .row {
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.starting_inputs .card form .button {
+  margin-top: 100px;
+}
+
+.instructions {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  height: 100vh;
+  width: 100vw;
+  background: rgba(0, 0, 0, 0.733);
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  transition: var(--quick);
+  transform: translateX(100%);
+}
+.instructions .card {
+  background: var(--white);
+  padding: 30px 90px 30px 50px;
+  border-radius: 10px;
+  height: 500px;
+  position: relative;
+  width: 1500px;
+  overflow: hidden;
+}
+.instructions .card .content h3 {
+  padding: 20px 0px;
+}
+.instructions .card .content p {
+  color: #5c5c5c;
+  letter-spacing: 2px;
+  text-justify: distribute;
+}/*# sourceMappingURL=style.css.map */

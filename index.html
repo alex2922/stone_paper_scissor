@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stone Paper Scissor</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+
+
+    <div class="startup_screen ">
+        <div class="topbar">
+            <h3 class="game_name ">Rock Paper Scissors <span>Game</span></h3>
+            <div class="created_by">
+                <p class="text">Created By</p> <a href="https://itzharsh.xyz/" target="_blank">Harsh Singh</a>
+            </div>
+        </div>
+        <div class="main_area">
+            <div class="container">
+                <div class="img"></div>
+                <div class="controls">
+                    <button onclick="open_StartingInput()">Play Against Computer</button>
+                    <p class="inactive" onclick="open_instructions()">How to Play ?</p>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="starting_inputs" id="starting_inputs" >
+
+        <div class="card">
+
+            <div class="cross" onclick="close_StartingInput()">
+                <span></span>
+                <span></span>
+            </div>
+            <form action="">
+                <label for="UserName">Enter Your Name</label>
+                <input type="text" name="UserName" placeholder="Your Name">
+                <div class="row">
+                    <label for="rounds">Number Of Rounds</label>
+                    <select name="rounds" id="rounds">
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">10</option>
+                    </select>
+                </div>
+
+                <input type="button" value="submit" class="button ">
+
+            </form>
+
+        </div>
+
+    </div>
+    <div class="instructions" id="instructions" >
+
+        <div class="card">
+
+            <div class="cross" onclick="close_instructions()">
+                <span></span>
+                <span></span>
+            </div>
+            
+            <div class="content">
+                <h3>Heading</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi maxime dicta nihil illum, reprehenderit omnis necessitatibus sint harum, impedit enim facilis assumenda </p>
+                <h4>Stone > Scissors</h4>
+                <h4>paper > Stone</h4>
+                <h4>Stone > Scissors</h4>
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+
+
+
+
+    <script src="./app.js"></script>
+
+
+</body>
+
+</html>
