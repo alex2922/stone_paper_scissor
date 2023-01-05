@@ -87,7 +87,7 @@
 
     <div class="main_game_ui" id="main">
         <div class="topbar">
-            <div class="round" onclick="RPS_text()">Round <span id="round_count" class="bold">1</span> of <span class="bold" id="round_max">7</span> </div>
+            <div class="round" >Round <span id="round_count" class="bold">1</span> of <span class="bold" id="round_max">3</span> </div>
             <div id="time_count"></div>
             <div class="score">
                 <div class="player"><span id="player_name_span">Your Name</span>: <span id="player_score" class="bold">0</span> </div>
@@ -95,7 +95,46 @@
             </div>
         </div>
 
-        
+        <div class="main_area">
+
+            <div class="fight_area">
+                <div class="bot infobox">
+                    <h1 id="bot_guessing" class="guess">?</h1>
+                    <div id="bot_picked " id="b_rock"></div>
+                    <div id="bot_picked " id="b_paper"></div>
+                    <div id="bot_picked " id="b_scissor"></div>
+                    <h2>Bot</h2>
+                </div>
+                <h1 class="vs">VS</h1>
+                <div class="player infobox">
+                    <h1 id="Player_guessing" class="guess">?</h1>
+                    <div id="player_picked " id="p_rock"></div>
+                    <div id="player_picked " id="p_paper"></div>
+                    <div id="player_picked " id="p_scissor"></div>
+                    <h2 id="player_name_h2">player</h2>
+
+                </div>
+            </div>
+
+            <div class="controls">
+                <div class="optionsbox">
+                    <div class="option" id="option1">
+                        <p>ROCK</p>
+                    </div>
+                    <div class="option" id="option2">
+                        <p>PAPER</p>
+                    </div>
+                    <div class="option" id="option3">
+                        <p>SCISSORS</p>
+                    </div>
+                </div>
+                <p>Choose an option</p>
+                <button onclick="RPS_text()">FIGHT</button>
+            </div>
+
+
+
+        </div>
 
 
 

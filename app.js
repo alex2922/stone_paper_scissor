@@ -1,8 +1,21 @@
 var text_box = document.getElementById("time_count");
 var user_name_input = document.getElementById("UserName");
 var player_name_span = document.getElementById("player_name_span");
+var player_name_h2 = document.getElementById("player_name_h2");
 var round_max_input = document.getElementById("rounds");
 var round_max_span = document.getElementById("round_max");
+var rock = document.getElementById("option1");
+var paper = document.getElementById("option2");
+var scissor = document.getElementById("option3");
+var Player_guessing = document.getElementById("Player_guessing");
+var Player_picked_img = document.getElementById("Player_picked");
+
+
+var p_rock =document.getElementById("p_rock");
+
+
+
+var player_picked = "";
 
 
 
@@ -13,10 +26,38 @@ var round_max_span = document.getElementById("round_max");
 ////directly executing code
 user_name_input.addEventListener("input", function() {
     player_name_span.innerHTML =user_name_input.value;
+    player_name_h2.innerHTML =user_name_input.value;
   });
 round_max_input.addEventListener("input", function() {
     round_max_span.innerHTML =round_max_input.value;
   });
+
+  rock.addEventListener("click",function(){
+    Player_guessing.style.display = "none";
+    player_picked = "r";
+    p_rock.style.display="inline";
+    console.log("rock");
+  })
+
+
+
+
+
+  paper.addEventListener("click",function(){
+    Player_guessing.style.display = "inline";
+    player_picked = "p";
+    console.log("paper");
+  })
+  scissor.addEventListener("click",function(){
+    Player_guessing.style.display = "none";
+    player_picked = "s";
+    console.log("scissors");
+  })
+
+
+
+
+
 
 
 

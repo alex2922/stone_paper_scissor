@@ -85,7 +85,8 @@ button,
     transition: var(--quick);
 
     &:hover {
-        transform: scale(1.05);
+        transform: scale(1.1);
+        box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.418);
     }
 
 }
@@ -375,7 +376,7 @@ body {
     position: absolute;
     top: 0px;
     left: 0px;
-    transform: translateX(0000px);
+    transform: translateX(10000px);
     
         .topbar {
         height: 200px;
@@ -409,9 +410,140 @@ body {
     .main_area {
         height: calc((100vh) - (200px));
         width: 100vw;
-        margin: 0px 100px;
+        margin: 0px;
         display: flex;
         align-items: center;
-        justify-content: space-evenly;
+        justify-content: space-between;
+        flex-direction: column;
+
+        .fight_area{
+            width: 80%;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            height: 30vh;
+
+            .infobox{
+                width: 40%;
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+
+                .guess{
+                    font-size: 200px;
+                    height: 500px;
+                    opacity: var(--opacity);
+                    font-weight: 900;
+                    font-style: italic;
+                    display: none;
+                }
+
+                div{
+                    height: 500px;
+                    width: 500px;
+                    background-size:contain ;
+                    background-repeat: no-repeat;
+                    background-position: center center;
+                }
+                #p_rock{
+                    background: url(img/rock.png);
+                    display: none;
+                }
+                #p_paper{
+                    background: url(img/paper.png);
+                    display: none;
+                }
+                #p_scissork{
+                    background: url(img/scissors.png);
+                    display: none;
+                }
+                #b_rock{
+                    background: url(img/rock.png);
+                    display: none;
+                }
+                #b_paper{
+                    background: url(img/paper.png);
+                    display: none;
+                }
+                #b_scissork{
+                    background: url(img/scissors.png);
+                    display: none;
+                }
+
+                h2{
+                    margin-top: 20px;
+                    font-weight: 900;
+                    font-style: italic; 
+                }
+
+
+
+
+
+            }
+            .vs{
+                font-size: 100px;
+                opacity: var(--opacity);
+                font-weight: 900;
+                font-style: italic;
+            }
+
+
+
+
+
+        }
+
+        .controls{
+            width: 80%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: center;
+            margin-top: 50px;
+            height: 25vh;
+
+            .optionsbox{
+                display: flex;
+                width: 20%;
+                justify-content: space-around;
+
+
+                .option{
+                    height: 80px;
+                    width: 80px;
+                    border-radius: 100px;
+                    background: var(--yellow);
+                    display: grid;
+                    place-items: center;
+                    transition: var(--quick);
+                    border: 5px solid var(--yellow);
+
+                    p{
+                        font-size: 12px;
+                        font-weight: 700;
+                    }
+
+                    &:hover , .active{
+                        transform: scale(1.1);
+                        border: 5px solid var(--black);
+                        box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.418);
+                    }
+
+                }
+            }
+            p{
+                font-weight: 500;
+            }
+
+
+        }
     }
+
+
+
+
+
+
 }
