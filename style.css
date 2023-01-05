@@ -135,6 +135,7 @@ button:hover,
 
 .bold {
   font-weight: 700;
+  transition: var(--quick);
 }
 
 body {
@@ -310,6 +311,7 @@ body {
   font-size: 36px;
   font-weight: 900;
   font-style: italic;
+  padding: 10px 40px;
 }
 .main_game_ui .topbar .score {
   display: flex;
@@ -338,7 +340,7 @@ body {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  height: 30vh;
+  height: 40vh;
 }
 .main_game_ui .main_area .fight_area .infobox {
   width: 40%;
@@ -353,37 +355,21 @@ body {
   opacity: var(--opacity);
   font-weight: 900;
   font-style: italic;
-  display: none;
 }
 .main_game_ui .main_area .fight_area .infobox div {
-  height: 500px;
+  height: 100%;
   width: 500px;
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center center;
+  overflow: hidden;
+  position: relative;
 }
-.main_game_ui .main_area .fight_area .infobox #p_rock {
-  background: url(img/rock.png);
-  display: none;
+.main_game_ui .main_area .fight_area .infobox div img {
+  height: inherit;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
-.main_game_ui .main_area .fight_area .infobox #p_paper {
-  background: url(img/paper.png);
-  display: none;
-}
-.main_game_ui .main_area .fight_area .infobox #p_scissork {
-  background: url(img/scissors.png);
-  display: none;
-}
-.main_game_ui .main_area .fight_area .infobox #b_rock {
-  background: url(img/rock.png);
-  display: none;
-}
-.main_game_ui .main_area .fight_area .infobox #b_paper {
-  background: url(img/paper.png);
-  display: none;
-}
-.main_game_ui .main_area .fight_area .infobox #b_scissork {
-  background: url(img/scissors.png);
+.main_game_ui .main_area .fight_area .infobox div #scissorimg, .main_game_ui .main_area .fight_area .infobox div #paperimg, .main_game_ui .main_area .fight_area .infobox div #rockimg, .main_game_ui .main_area .fight_area .infobox div #bscissorimg, .main_game_ui .main_area .fight_area .infobox div #bpaperimg, .main_game_ui .main_area .fight_area .infobox div #brockimg {
   display: none;
 }
 .main_game_ui .main_area .fight_area .infobox h2 {
@@ -432,4 +418,51 @@ body {
 }
 .main_game_ui .main_area .controls p {
   font-weight: 500;
+}
+.main_game_ui .main_area .controls #fight_button {
+  pointer-events: none;
+  opacity: var(--opacity);
+}
+.main_game_ui .home {
+  position: absolute;
+  bottom: 30px;
+  right: 30px;
+  height: 50px;
+  background: var(--yellow);
+  border: 5px solid black;
+  border-radius: 10px;
+  width: 50px;
+}
+.main_game_ui .home:hover {
+  -webkit-animation: little 0.33s ease-out;
+          animation: little 0.33s ease-out;
+}
+
+.final_screen {
+  transform: translateX(10000px);
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  height: 100vh;
+  width: 100vw;
+  z-index: 10000;
+  background: rgba(0, 0, 0, 0.887);
+  position: absolute;
+  top: 0px;
+  left: 0px;
+}
+.final_screen .box {
+  height: 500px;
+  width: 400px;
+  background: var(--white);
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-direction: column;
+  border-radius: 20px;
+  box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.483);
+}
+.final_screen .box h2 {
+  font-size: 30px;
+  text-align: center;
 }/*# sourceMappingURL=style.css.map */
