@@ -24,7 +24,7 @@
             <div class="container">
                 <div class="img"></div>
                 <div class="controls">
-                    <button onclick="open_StartingInput()">Play Against Computer</button>
+                    <button onclick="open_StartingInput()">Play Against Bot</button>
                     <p class="inactive" onclick="open_instructions()">How to Play ?</p>
 
                 </div>
@@ -42,7 +42,7 @@
             </div>
             <form action="">
                 <label for="UserName">Enter Your Name</label>
-                <input type="text" name="UserName" placeholder="Your Name">
+                <input type="text" name="UserName" placeholder="Your Name" id="UserName">
                 <div class="row">
                     <label for="rounds">Number Of Rounds</label>
                     <select name="rounds" id="rounds">
@@ -57,7 +57,7 @@
                     </select>
                 </div>
 
-                <input type="button" value="submit" class="button ">
+                <input type="button" value="submit" class="button " onclick="open_main()">
 
             </form>
 
@@ -85,19 +85,23 @@
 
     </div>
 
-    <div class="main_game_ui">
+    <div class="main_game_ui" id="main">
         <div class="topbar">
-            <div class="round">Round <span id="round_count">3</span> </div>
+            <div class="round" onclick="RPS_text()">Round <span id="round_count" class="bold">1</span> of <span class="bold" id="round_max">7</span> </div>
+            <div id="time_count"></div>
             <div class="score">
-                
+                <div class="player"><span id="player_name_span">Your Name</span>: <span id="player_score" class="bold">0</span> </div>
+                <div class="bot"><span id="bot_name">Bot</span>: <span id="bot_score" class="bold">0</span> </div>
             </div>
         </div>
+
+        
+
+
+
+
+
     </div>
-
-
-
-
-
 
 
     <script src="./app.js"></script>
