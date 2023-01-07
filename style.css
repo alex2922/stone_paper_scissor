@@ -179,7 +179,10 @@ body {
   justify-content: space-between;
 }
 .startup_screen .main_area .container .img {
-  background: var(--yellow);
+  background: url("img/hero.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
   height: 400px;
   width: 400px;
 }
